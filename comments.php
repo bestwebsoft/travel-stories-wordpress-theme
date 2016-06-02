@@ -8,7 +8,7 @@
  * @subpackage Travel Stories
  * @since      Travel Stories 1.0
  */
-if ( post_password_required() ) /*check for password verification*/ {
+if ( post_password_required() ) { /*check for password verification*/
 	return;
 }
 if ( have_comments() || comments_open() ) : ?>
@@ -33,7 +33,7 @@ if ( have_comments() || comments_open() ) : ?>
 		endif; /* have_comments() */
 		if ( comments_open() ) :
 			$args = array(
-					'comment_notes_after' => '<p class="form-allowed-tags">' . __( 'You may use these', 'travel-stories' ) . '<abbr title="HyperText Markup Language"> HTML </abbr>' . __( 'tags and attributes', 'travel-stories' ) . ':' . ' <pre>' . allowed_tags() . '</pre>' . '</p>'
+				'comment_notes_after' => '<p class="form-allowed-tags">' . __( 'You may use these', 'travel-stories' ) . '<abbr title="HyperText Markup Language"> HTML </abbr>' . __( 'tags and attributes', 'travel-stories' ) . ':' . ' <pre>' . allowed_tags() . '</pre>' . '</p>',
 			);
 			comment_form( $args ); /*custom comment form*/
 		else : ?>

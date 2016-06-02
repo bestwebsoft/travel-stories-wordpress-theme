@@ -18,13 +18,13 @@
 <!-- jssor.slider.mini.js = jssor.sliderc.mini.js = jssor.sliders.mini.js = (jssor.js + jssor.slider.js) -->
 	<?php if ( is_front_page() ) {
 		$posts_in_slider = new WP_Query( array(
-			'posts_per_page'		=> -1,
-			'post_type'				=> 'post',
-			'meta_key'				=> '_travel_stories_slider',
-			'meta_value'			=> 1,
-			'ignore_sticky_posts'	=> 1
-			) );		
-		if( $posts_in_slider->have_posts() ) { ?>
+			'posts_per_page'      => - 1,
+			'post_type'           => 'post',
+			'meta_key'            => '_travel_stories_slider',
+			'meta_value'          => 1,
+			'ignore_sticky_posts' => 1,
+		) );
+		if ( $posts_in_slider->have_posts() ) { ?>
 			<div id="travel_stories_wrapper">
 				<header>
 					<div class="travel-stories-header-wrapper">
@@ -47,7 +47,7 @@
 					</div>
 					<div class="slider" id="slider">
 						<div u="slides" id="slides">
-							<?php while( $posts_in_slider->have_posts() ) {
+							<?php while ( $posts_in_slider->have_posts() ) {
 								$posts_in_slider->the_post();
 								$date = sprintf( '<a href="%1$s" title="%2$s" rel="bookmark"><time class="entry-date" datetime="%3$s">%4$s</time></a>', esc_url( get_permalink() ), esc_attr( sprintf( __( 'Permalink to %s', 'travel-stories' ), the_title_attribute( 'echo=0' ) ) ), esc_attr( get_the_date( 'c' ) ), esc_html( get_the_date( 'F j, Y' ) ) ); ?>
 								<div id="travel_stories_img_mountains">

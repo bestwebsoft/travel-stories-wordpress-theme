@@ -1,17 +1,17 @@
  === Travel Stories ===
-Contributors: the BestWebSoft team
+Contributors: BestWebLayout, BestWebSoft
 Tags: white, black, gray, fluid-layout, three-columns, threaded-comments, sticky-post, custom-header, translation-ready, featured-images
 Requires at least: 4.1
-Tested up to: 4.3
-Stable tag: 1.4
+Tested up to: 4.6-trunk
+Stable tag: 1.5
 License: GNU General Public License V3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
-Travel Stories WordPress Theme, Copyright 2015 BestWebSoft.com
+Travel Stories WordPress Theme, Copyright 2016 BestWebLayout.com
 Travel Stories is distributed under the terms of the GNU GPL
 
 == Description ==
 
-Travel Stories is a fresh and clean theme for hotel accommodations, travel bloggers, travel agencies and other travel- and tourism-related websites. The theme includes an extensive documentation and is really easy to use. Travel Stories is perfect for people who need a ready-to-go website for their hotel or travel agency. Also, it is highly customizable to go with your marketing plan or to match your brand. Travel Stories will be awesome for Travel Diaries, Tourist Agencies, Travel Magazines, Tourist Destinations, Photography, Handmade and DIY Workshops, Travel Storiess, Culture Overviews and Tutorials, Event Information, Cuisine, etc. Live demo at http://bestwebsoft.com/wordpress_demo_theme/travelstories/
+Travel Stories is a fresh and clean theme for hotel accommodations, travel bloggers, travel agencies and other travel- and tourism-related websites. The theme includes an extensive documentation and is really easy to use. Travel Stories is perfect for people who need a ready-to-go website for their hotel or travel agency. Also, it is highly customizable to go with your marketing plan or to match your brand. Travel Stories will be awesome for Travel Diaries, Tourist Agencies, Travel Magazines, Tourist Destinations, Photography, Handmade and DIY Workshops, Travel Storiess, Culture Overviews and Tutorials, Event Information, Cuisine, etc. Live demo at http://wp-demo-theme.bestweblayout.com/travelstories/
 
 = Features =
 
@@ -28,7 +28,7 @@ Travel Stories is a fresh and clean theme for hotel accommodations, travel blogg
 
 * Russian (ru_RU)
 
-If you would like to create your own language pack or update the existing one, you can send <a href="http://codex.wordpress.org/Translating_WordPress" target="_blank">the text of PO and MO files</a> to <a href="http://support.bestwebsoft.com" target="_blank">BestWebSoft</a>, and we'll add it to the plugin. You can download the latest version of the program for working with PO and MO files <a href="http://www.poedit.net/download.php" target="_blank">Poedit</a>.
+If you would like to create your own language pack or update the existing one, you can send <a href="http://codex.wordpress.org/Translating_WordPress" target="_blank">the text of PO and MO files</a> to <a href="http://support.bestweblayout.com" target="_blank">BestWebLayout</a>, and we'll add it to the plugin. You can download the latest version of the program for working with PO and MO files <a href="http://www.poedit.net/download.php" target="_blank">Poedit</a>.
 
 = Copyrights for Resources used in this theme =
 
@@ -61,7 +61,7 @@ https://pixabay.com/en/palau-beach-bay-lake-pond-sea-175130/
 https://pixabay.com/en/mountains-lake-reflection-calm-593178/
 http://www.pexels.com/photo/sailing-ship-boat-sailing-lake-4167/
 
-Everything else used in this theme has been created by BestWebSoft, especially for the Travel Stories theme and is distributed under GPL license.
+Everything else used in this theme has been created by BestWebLayout, especially for the Travel Stories theme and is distributed under GPL license.
 
 == Installation ==
 
@@ -127,9 +127,10 @@ In this theme, the slider is installed by default. To have it displayed, please 
 
 == Changelog ==
 
-= V1.5 - 01.09.2015 =
-* Bugfix: Bug with header displaying (without slider) was fixed
-* Bugfix: Bug with comments displaying was fixed
+= V1.5 - 01.06.2016 =
+* Bugfix: Bug with header displaying (without slider) was fixed.
+* Bugfix: Bug with comments displaying was fixed.
+* Update: The theme has been tested for the compatibility with WordPress v.4.5.2.
 
 = V1.4 - 28.07.2015 =
 * Bugfix: screen-reader-text class was added to the style.css file
@@ -169,8 +170,7 @@ In this theme, the slider is installed by default. To have it displayed, please 
 == Upgrade Notice ==
 
 = V1.5 =
-Bug with header displaying (without slider) was fixed.
-Bug with comments displaying was fixed.
+Bug with header displaying (without slider) was fixed. Bug with comments displaying was fixed. The theme has been tested for the compatibility with WordPress v.4.5.2.
 
 = V1.4 =
 screen-reader-text class was added to the style.css file

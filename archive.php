@@ -19,7 +19,8 @@ get_header(); ?>
 
 					<div class="travel-stories-page-post-name">
 						<h1>
-							<a class="travel-stories-post-name" href="<?php the_permalink(); ?>" rel="bookmark" title="<?php _e( 'Permanent Link to ', 'travel-stories' ); the_title_attribute(); ?>">
+							<a class="travel-stories-post-name" href="<?php the_permalink(); ?>" rel="bookmark" title="<?php _e( 'Permanent Link to ', 'travel-stories' );
+							the_title_attribute(); ?>">
 								<?php echo travel_stories_short_title( 70 ); ?>
 							</a></h1>
 					</div>
@@ -42,10 +43,10 @@ get_header(); ?>
 					<?php next_posts_link( __( 'next story', 'travel-stories' ) . '&nbsp;&raquo;' ); ?>
 				</div>
 			</nav>
-		<?php else:
+		<?php else :
 			get_template_part( 'trvlstrs', 'nothingfound' );
-		endif;/* have_posts() */ 
+		endif;/* have_posts() */
 		wp_reset_postdata(); ?>
 	</div>
 	<div class="clear"></div>
-<?php get_footer(); ?>
+<?php get_footer();
