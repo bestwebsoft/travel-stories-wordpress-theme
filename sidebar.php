@@ -11,7 +11,14 @@
 if ( is_active_sidebar( 'content_sidebar' ) ) {
 	dynamic_sidebar( 'content_sidebar' );
 } else { /*If sidebar no active display next widget */
-	the_widget( 'WP_Widget_Meta' );
-	the_widget( 'WP_Widget_Calendar' );
-	the_widget( 'WP_Widget_Search' );
+	$args     = array(
+		'before_widget' => '<div class="widget %s">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h2 class="Widget_title">',
+		'after_title'   => '</h2>',
+	);
+	$instance = array();
+	the_widget( 'WP_Widget_Meta', $instance, $args );
+	the_widget( 'WP_Widget_Calendar', $instance, $args );
+	the_widget( 'WP_Widget_Search', $instance, $args );
 }

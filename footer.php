@@ -11,10 +11,12 @@
 		<div class="clear"></div>
 	</aside>
 	<div class="copyright">
-		<p><?php echo __( 'Designed with love by', 'travel-stories' ) . '&nbsp;'; ?>
-			<a href="<?php echo esc_url( wp_get_theme()->get( 'AuthorURI' ) ); ?>"><?php _e( 'BestWebSoft', 'travel-stories' ) ?></a><?php echo '&nbsp;' . __( 'and', 'travel-stories' ) . '&nbsp;'; ?>
-			<a href="<?php echo esc_url( 'http://wordpress.org/' ); ?>" target="_blank"><?php _e( 'WordPress', 'travel-stories' ) ?></a><?php echo '&nbsp;&copy;&nbsp;' . date( 'Y' ) . '&nbsp;'; ?>
-			<a href="<?php echo esc_url( home_url() ); ?>"><?php bloginfo( 'name' ); ?></a></p>
+		<p>
+			<?php echo __( 'Designed with love by', 'travel-stories' ); ?>
+			<a href="<?php echo esc_url( wp_get_theme()->get( 'AuthorURI' ) ); ?>">BestWebLayout</a> <?php echo __( 'and', 'travel-stories' ); ?>
+			<a href="<?php echo esc_url( 'http://wordpress.org/' ); ?>" target="_blank">WordPress</a> <?php echo '&copy; ' . date_i18n( 'Y ' ); ?>
+			<a href="<?php echo esc_url( home_url() ); ?>"><?php bloginfo( 'name' ); ?></a>
+		</p>
 	</div>
 </footer>
 </div>

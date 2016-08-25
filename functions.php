@@ -99,7 +99,7 @@ function travel_stories_sidebar_widgets_init() {
 	register_sidebar( array(
 		'name'          => __( 'Content sidebar', 'travel-stories' ),
 		'id'            => 'content_sidebar',
-		'before_widget' => '<div class ="Widget">',
+		'before_widget' => '<div class="widget">',
 		'after_widget'  => '</div>',
 		'before_title'  => '<h2 class="Widget_title">',
 		'after_title'   => '</h2>',
@@ -107,7 +107,7 @@ function travel_stories_sidebar_widgets_init() {
 	register_sidebar( array(
 		'name'          => __( 'Footer widget area', 'travel-stories' ),
 		'id'            => 'footer_sidebar',
-		'before_widget' => '<div class ="footer_widget">',
+		'before_widget' => '<div class="footer_widget">',
 		'after_widget'  => '</div>',
 		'before_title'  => '<h3 class="footer_title">',
 		'after_title'   => '</h3>',
@@ -313,45 +313,6 @@ function travel_stories_short_title( $maxchar = 70 ) {
 
 	return $title;
 }
-
-/* backwards compatibility title-tag */
-if ( ! function_exists( '_wp_render_title_tag' ) ) {
-	/* customize title if WP version < 4.1 */
-	function travel_stories_wp_title( $title, $sep = '|' ) {
-		global $page, $paged;
-
-		if ( is_feed() ) {
-			return $title;
-		}
-
-		/* Add the blog name */
-		$title = get_bloginfo( 'name', 'display' ) . $title;
-
-		/* Add the blog description for the home/front page. */
-		$site_description = get_bloginfo( 'description', 'display' );
-		if ( $site_description && ( is_home() || is_front_page() ) ) {
-			$title .= " $sep $site_description ";
-		}
-
-		/* Add a page number if necessary: */
-		if ( ( $paged >= 2 || $page >= 2 ) && ! is_404() ) {
-			$title .= " $sep " . sprintf( __( 'Page %s', 'travel-stories' ), max( $paged, $page ) );
-		}
-
-		return $title;
-	}
-
-	/* add wp_title filter if WP version < 4.1 */
-	add_filter( 'wp_title', 'travel_stories_wp_title' );
-
-	/* render title in wp_head if WP version < 4.1 */
-	function travel_stories_render_title() { ?>
-		<title><?php wp_title( '|', true, 'right' ); ?></title>
-	<?php }
-
-	add_action( 'wp_head', 'travel_stories_render_title' );
-}
-/* end backwards compatibility */
 
 add_action( 'after_setup_theme', 'travel_stories_setup' );
 add_action( 'widgets_init', 'travel_stories_sidebar_widgets_init' );

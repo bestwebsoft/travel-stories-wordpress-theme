@@ -11,7 +11,10 @@
 <head>
 	<meta name="viewport" content="width=device-width" />
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
-	<?php wp_head(); ?>
+	<?php if ( is_singular() && pings_open( get_queried_object() ) ) : ?>
+		<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
+	<?php endif;
+	wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
 <!-- use jssor.slider.mini.js (40KB) or jssor.sliderc.mini.js (32KB, with caption, no slideshow) or jssor.sliders.mini.js (28KB, no caption, no slideshow) instead for release -->
@@ -120,7 +123,6 @@
 					<h1>
 						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php bloginfo( 'name' ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
 					</h1>
-
 					<h2 id="site-description" class="wrap"><?php bloginfo( 'description' ) ?></h2>
 				</div>
 				<div class="travel-stories-search-toggle">
@@ -133,28 +135,11 @@
 				</div>
 			</div>
 			<h6 class="travel-stories-page-name">
-				<?php if ( is_category() ) {
-					printf( __( 'Category:', 'travel-stories' ) . '&nbsp;' . '%s', single_cat_title( '', false ) ); ?>
+				<?php if ( is_archive() ) {
+					the_archive_title(); ?>
 					<div class="travel-stories-page-line"></div>
 				<?php } elseif ( is_search() ) {
-					printf( __( 'Search for:', 'travel-stories' ) . '&nbsp;' . '%s' . '?', get_search_query() ); ?>
-					<div class="travel-stories-page-line"></div>
-				<?php } elseif ( is_tag() ) {
-					printf( __( 'Tags:', 'travel-stories' ) . '&nbsp;' . '%s', single_tag_title( '', false ) ); ?>
-					<div class="travel-stories-page-line"></div>
-				<?php } elseif ( is_author() ) {
-					printf( __( 'Author:', 'travel-stories' ) . '&nbsp;' . '%s', get_the_author() ); ?>
-					<div class="travel-stories-page-line"></div>
-				<?php } elseif ( is_archive() ) {
-					if ( is_day() ) :
-						printf( __( 'Daily Archives:', 'travel-stories' ) . '&nbsp;' . '%s', get_the_date() );
-					elseif ( is_month() ) :
-						printf( __( 'Monthly Archives:', 'travel-stories' ) . '&nbsp;' . '%s', get_the_date( _x( 'F Y', 'monthly archives date format', 'travel-stories' ) ) );
-					elseif ( is_year() ) :
-						printf( __( 'Yearly Archives:', 'travel-stories' ) . '&nbsp;' . '%s', get_the_date( _x( 'Y', 'yearly archives date format', 'travel-stories' ) ) );
-					else :
-						_e( 'etc.:', 'travel-stories' );
-					endif; ?>
+					printf( __( 'Search for:', 'travel-stories' ) . '&nbsp;' . '%s', get_search_query() ); ?>
 					<div class="travel-stories-page-line"></div>
 				<?php } ?>
 			</h6>

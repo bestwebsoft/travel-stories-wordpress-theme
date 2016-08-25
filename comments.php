@@ -15,7 +15,7 @@ if ( have_comments() || comments_open() ) : ?>
 	<article id="comments" class="comments-area">
 		<?php if ( have_comments() ) : ?>
 			<h2 class="comments-title">
-				<?php printf( _n( __( 'One thought on', 'travel-stories' ) . '&ldquo;%2$s&rdquo;', '%1$s ' . __( 'thoughts on', 'travel-stories' ) . ' &ldquo;%2$s&rdquo;', get_comments_number(), 'travel-stories' ), number_format_i18n( get_comments_number() ), '<span>' . get_the_title() . '</span>' ); ?>
+				<?php printf( _n( 'One thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', get_comments_number(), 'travel-stories' ), number_format_i18n( get_comments_number() ), '<span>' . get_the_title() . '</span>' ); ?>
 			</h2>
 			<ul class="commentlist">
 				<?php wp_list_comments( array( 'style' => 'ul', 'callback' => 'travel_stories_comment' ) ); ?>
@@ -44,4 +44,4 @@ if ( have_comments() || comments_open() ) : ?>
 <article class="comments-area">
 	<p class="no-comments"><?php _e( 'Comments are closed.', 'travel-stories' ); ?></p>
 </article>
-<?php endif ?><!-- have_comments() || comments_open() -->
+<?php endif; /* have_comments() || comments_open() */

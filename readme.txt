@@ -1,9 +1,11 @@
  === Travel Stories ===
 Contributors: BestWebLayout, BestWebSoft
-Tags: white, black, gray, fluid-layout, three-columns, threaded-comments, sticky-post, custom-header, translation-ready, featured-images
-Requires at least: 4.1
-Tested up to: 4.6-trunk
-Stable tag: 1.5
+Author URI: http://bestweblayout.com/
+Donate link: http://bestwebsoft.com/donate/
+Tags: three-columns, threaded-comments, sticky-post, custom-background, custom-header, custom-menu, editor-style, translation-ready, featured-images
+Requires at least: 4.2
+Tested up to: 4.6
+Stable tag: 1.6
 License: GNU General Public License V3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 Travel Stories WordPress Theme, Copyright 2016 BestWebLayout.com
@@ -106,11 +108,7 @@ The Theme includes a standart Widget and the Footer widget.
 
 = How can I change the language from English into Russian? =
 
-WordPress v4.0 and above:
 Change the language in the admin settings screen. Settings > General > Site Language.
-
-WordPress v3.9.2 and below:
-In the main catalog of your WordPress site, please find wp-config.php file, open it and change define( 'WPLANG', '' ); for define( 'WPLANG', 'ru_RU' );
 
 = Does the theme support widgets? =
 
@@ -126,6 +124,9 @@ In this theme, the slider is installed by default. To have it displayed, please 
 1. Theme home page.
 
 == Changelog ==
+
+= V1.6 - 25.08.2016 =
+* Update : All functionality for WordPress 4.6 was updated.
 
 = V1.5 - 01.06.2016 =
 * Bugfix: Bug with header displaying (without slider) was fixed.
@@ -168,6 +169,9 @@ In this theme, the slider is installed by default. To have it displayed, please 
 * Release of Travel Stories theme.
 
 == Upgrade Notice ==
+
+= V1.6 =
+* The compatibility with new WordPress version updated.
 
 = V1.5 =
 Bug with header displaying (without slider) was fixed. Bug with comments displaying was fixed. The theme has been tested for the compatibility with WordPress v.4.5.2.

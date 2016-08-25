@@ -18,25 +18,21 @@ get_header(); ?>
 						<a href="<?php the_permalink(); ?>">
 							<div class="travel-stories-post-blackout"></div>
 						</a>
-
 						<p class="travel-stories-category">
 							<?php $category = get_the_category();
 							if ( $category ) {
 								echo '<a href="' . get_category_link( $category[0]->term_id ) . '">' . $category[0]->cat_name . '</a>';
 							} ?>
 						</p>
-
 						<h1>
 							<a class="travel-stories-post-name" href="<?php the_permalink(); ?>" rel="bookmark" title="<?php _e( 'Permanent Link to ', 'travel-stories' );
 							the_title_attribute(); ?>">
 								<?php echo travel_stories_short_title( 70 ); ?>
 							</a>
 						</h1>
-
 						<div class="travel-stories-post-line"></div>
 						<?php $date = sprintf( '<a href="%1$s" title="%2$s" rel="bookmark"><time class="entry-date" datetime="%3$s">%4$s</time></a>', esc_url( get_permalink() ), esc_attr( sprintf( __( 'Permalink to %s', 'travel-stories' ), the_title_attribute( 'echo=0' ) ) ), esc_attr( get_the_date( 'c' ) ), esc_html( get_the_date( 'F j, Y' ) ) ); ?>
 						<p class="travel-stories-post-date"><?php echo $date; ?></p>
-
 						<p class="travel-stories-post-author"><?php the_author_posts_link(); ?></p>
 						<?php if ( has_post_thumbnail() ) {
 							the_post_thumbnail( 'travel_stories_post' );
@@ -72,13 +68,13 @@ get_header(); ?>
 					<div class="travel-stories-featured-post-blackout"></div>
 				</div>
 				<div class="travel-stories-featured-post-column">
-					<p class="travel-stories-featured-category"> <?php the_category( ',' ) ?></p>
+					<p class="travel-stories-featured-category"><?php the_category( ',' ) ?></p>
 					<h5>
 						<a class="travel-stories-featured-post-name" href="<?php the_permalink(); ?>" rel="bookmark" title="<?php _e( 'Permanent Link to ', 'travel-stories' );
 						the_title_attribute(); ?>">
 							<?php the_title(); ?>
-						</a></h5>
-
+						</a>
+					</h5>
 					<div class="travel-stories-featured-content">
 						<?php the_excerpt(); ?>
 					</div>

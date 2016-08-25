@@ -14,18 +14,16 @@ get_header(); ?>
 							the_post_thumbnail( 'travel_stories_post' );
 						} ?>
 					</a>
-
 					<div class="travel-stories-page-post-name">
 						<h1>
 							<a class="travel-stories-post-name" href="<?php the_permalink(); ?>" rel="bookmark" title="<?php _e( 'Permanent Link to ', 'travel-stories' );
 							the_title_attribute(); ?>">
 								<?php echo travel_stories_short_title( 70 ); ?>
-							</a></h1>
+							</a>
+						</h1>
 					</div>
 					<p class="travel-stories-page-author"><?php the_author_posts_link(); ?></p>
-
-					<p class="travel-stories-page-author"> <?php the_category( ',' ) ?></p>
-
+					<p class="travel-stories-page-author"><?php the_category( ',' ) ?></p>
 					<div class="travel-stories-page-excerpt">
 						<?php the_excerpt(); ?>
 					</div>
@@ -35,10 +33,10 @@ get_header(); ?>
 			<div class="clear"></div>
 			<nav class="travel-stories-single-block-previous-next-story">
 				<div class="travel-stories-single-previous-story">
-					<?php previous_posts_link( '&laquo;&nbsp;' . __( 'previous story', 'travel-stories' ) ); ?>
+					<?php previous_posts_link( '&laquo;&nbsp;' . __( 'previous stories', 'travel-stories' ) ); ?>
 				</div>
 				<div class="travel-stories-single-next-story">
-					<?php next_posts_link( __( 'next story', 'travel-stories' ) . '&nbsp;&raquo;' ); ?>
+					<?php next_posts_link( __( 'next stories', 'travel-stories' ) . '&nbsp;&raquo;' ); ?>
 				</div>
 			</nav>
 			<?php wp_reset_postdata();
